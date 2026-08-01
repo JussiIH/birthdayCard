@@ -11,6 +11,9 @@
     outline: 2px solid var(--accent);
     outline-offset: 2px;
   }
+  &:active {
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  }
 }
 
 @keyframes subtleBounce {

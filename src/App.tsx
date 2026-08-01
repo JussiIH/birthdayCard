@@ -6,6 +6,7 @@ import confetti from 'canvas-confetti';
 
 function App() {
   const [flipped, setFlipped] = useState(false);
+  const woltLink = import.meta.env.VITE_WOLT_LINK;
 
   const handleClick = () => {
     confetti({
@@ -33,9 +34,19 @@ function App() {
                 <img src={monomestaImg} className="banner" />
               </div>
               <div className="flip-back">
-                <p>Wolt koodi:</p>
+                <p>Wolt linkki:</p>
                 <p>
-                  <strong>WOLTVILLE29</strong>
+                  {woltLink ? (
+                    <a
+                      href={woltLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <strong>VilleJJ</strong>
+                    </a>
+                  ) : (
+                    <strong>VilleJJ</strong>
+                  )}
                 </p>
               </div>
             </div>
