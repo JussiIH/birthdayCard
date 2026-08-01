@@ -22,7 +22,10 @@ jobs:
         with:
           node-version: '24'
       - run: npm ci
-      - run: npm run build
+      - name: Build app
+        env:
+          VITE_WOLT_LINK: ${{ secrets.VITE_WOLT_LINK }}
+        run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist

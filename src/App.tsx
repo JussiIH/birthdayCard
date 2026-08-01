@@ -36,17 +36,9 @@ function App() {
               <div className="flip-back">
                 <p>Wolt linkki:</p>
                 <p>
-                  {woltLink ? (
-                    <a
-                      href={woltLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <strong>VilleJJ</strong>
-                    </a>
-                  ) : (
+                  <a href={woltLink} target="_blank" rel="noopener noreferrer">
                     <strong>VilleJJ</strong>
-                  )}
+                  </a>
                 </p>
               </div>
             </div>
